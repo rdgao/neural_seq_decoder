@@ -2,11 +2,13 @@
 modelName = 'speechBaseline4'
 
 args = {}
-args['outputDir'] = '/oak/stanford/groups/henderj/stfan/logs/speech_logs/' + modelName
-args['datasetPath'] = '/oak/stanford/groups/henderj/fwillett/speech/ptDecoder_ctc'
+# args['outputDir'] = '/oak/stanford/groups/henderj/stfan/logs/speech_logs/' + modelName
+# args['datasetPath'] = '/oak/stanford/groups/henderj/fwillett/speech/ptDecoder_ctc'
+args['outputDir'] = '/home/rdgao/Documents/data/human_speech/logs/speech_logs/' + modelName
+args['datasetPath'] = '/home/rdgao/Documents/data/human_speech/ptDecoder_ctc'
 args['seqLen'] = 150
 args['maxTimeSeriesLen'] = 1200
-args['batchSize'] = 64
+args['batchSize'] = 32 #64
 args['lrStart'] = 0.02
 args['lrEnd'] = 0.02
 args['nUnits'] = 1024

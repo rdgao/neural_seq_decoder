@@ -236,10 +236,10 @@ def loadModel(modelDir, nInputLayers=24, device="cuda"):
     return model
 
 
-@hydra.main(version_base="1.1", config_path="conf", config_name="config")
-def main(cfg):
-    cfg.outputDir = os.getcwd()
-    trainModel(cfg)
+# @hydra.main(version_base="1.1", config_path="conf", config_name="config")
+# def main(cfg):
+#     cfg.outputDir = os.getcwd()
+#     trainModel(cfg)
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
