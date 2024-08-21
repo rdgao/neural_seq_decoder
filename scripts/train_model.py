@@ -4,8 +4,15 @@ modelName = 'speechBaseline4'
 args = {}
 # args['outputDir'] = '/oak/stanford/groups/henderj/stfan/logs/speech_logs/' + modelName
 # args['datasetPath'] = '/oak/stanford/groups/henderj/fwillett/speech/ptDecoder_ctc'
-args['outputDir'] = '/home/rdgao/Documents/data/human_speech/logs/speech_logs/' + modelName
-args['datasetPath'] = '/home/rdgao/Documents/data/human_speech/ptDecoder_ctc'
+
+loc = 'slurm'
+if loc == 'lajolla'
+    data_root = '/home/rdgao/Documents/data/human_speech/'
+elif loc == 'slurm'
+    data_root = '/mnt/qb/work/macke/rgao97/data/human_speech/'
+
+args['outputDir'] = data_root + '/logs/speech_logs/' + modelName
+args['datasetPath'] = data_root + '/ptDecoder_ctc'
 args['seqLen'] = 150
 args['maxTimeSeriesLen'] = 1200
 args['batchSize'] = 32 #64
