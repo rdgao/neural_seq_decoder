@@ -6,9 +6,9 @@ args = {}
 # args['datasetPath'] = '/oak/stanford/groups/henderj/fwillett/speech/ptDecoder_ctc'
 
 loc = 'slurm'
-if loc == 'lajolla'
+if loc == 'lajolla':
     data_root = '/home/rdgao/Documents/data/human_speech/'
-elif loc == 'slurm'
+elif loc == 'slurm':
     data_root = '/mnt/qb/work/macke/rgao97/data/human_speech/'
 
 args['outputDir'] = data_root + '/logs/speech_logs/' + modelName
